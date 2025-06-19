@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Myra Fernandes' Research - Cognitive Neuroscience Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#BB86FC",
+                        secondary: "#03DAC6",
+                        dark: "#121212",
+                        "dark-surface": "#1E1E1E"
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="w-full">
+        <!-- Navigation -->
+        <nav class="px-6 py-4 bg-dark-surface shadow-lg">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://i.ibb.co/ymXRvyLW/Gemini-Generated-Image-vtj4z6vtj4z6vtj4-removebg-preview.png" alt="Lab Logo" class="h-12 mr-4">
+                    <h1 class="text-2xl font-bold text-white">Cognitive Neuroscience Lab</h1>
+                </div>
+                <div class="nav-links flex flex-wrap justify-center gap-1 md:gap-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="research.html" class="nav-link">Research</a>
+                    <a href="teaching.html" class="nav-link">Teaching</a>
+                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="people.html" class="nav-link">People</a>
+                    <a href="join-us.html" class="nav-link">Join Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <!-- Profile Hero Section -->
+        <section class="py-16 px-6 bg-gradient-to-b from-dark-surface to-dark">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2 order-2 md:order-1">
+                        <h2 class="text-4xl font-bold mb-4 text-primary">Dr. Myra Fernandes</h2>
+                        <p class="text-xl text-secondary font-medium mb-6">Principal Investigator, Cognitive Neuroscience Lab</p>
+                        <p class="mb-6 text-gray-300">
+                            Dr. Myra Fernandes is a leading researcher in the field of cognitive neuroscience, 
+                            specializing in memory processes and their neural underpinnings. Her innovative 
+                            research explores how various factors influence memory formation, consolidation, 
+                            and retrieval, with a particular focus on drawing as a mnemonic technique.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <div class="flex items-center text-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>Professor of Psychology</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span>Cognitive Neuroscience Lab</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <a href="mailto:example@university.edu" class="hover:text-primary">example@university.edu</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#research" class="interactive-button">Research Focus</a>
+                            <a href="#publications" class="interactive-button bg-dark-surface border border-primary text-primary hover:bg-primary/20">
+                                Key Publications
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 flex justify-center md:justify-end">
+                        <div class="profile-photo-container h-64 w-64 rounded-full overflow-hidden bg-dark-surface border-4 border-primary flex items-center justify-center">
+                            <!-- Faculty Photo Placeholder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Background Section -->
+        <section id="professional-background" class="py-16 px-6 bg-dark">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 text-secondary">Professional Background</h3>
+                </div>
+                <div class="space-y-12">
+                    <!-- Education -->
+                    <div class="bg-dark-surface p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold mb-6 text-primary">Education</h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2001</span>
+                                <span><strong>PhD Psychology; Cognitive Neuropsychology</strong>, University of Toronto</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">1997</span>
+                                <span><strong>MA Psychology</strong>, University of Toronto</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">1996</span>
+                                <span><strong>BSc Psychology major, Biology minor</strong>, University of Waterloo</span>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <!-- Professional Positions -->
+                    <div class="bg-dark-surface p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold mb-6 text-primary">Professional Positions</h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-32 flex-shrink-0 mb-1 sm:mb-0">2015-present</span>
+                                <span><strong>Full Professor</strong>, University of Waterloo</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-32 flex-shrink-0 mb-1 sm:mb-0">2006-present</span>
+                                <span><strong>Research Scientist</strong>, Schlegel-UW Research Institute for Aging</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-32 flex-shrink-0 mb-1 sm:mb-0">2009-2015</span>
+                                <span><strong>Associate Professor</strong>, University of Waterloo</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-32 flex-shrink-0 mb-1 sm:mb-0">2004-2009</span>
+                                <span><strong>Assistant Professor</strong>, University of Waterloo</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-32 flex-shrink-0 mb-1 sm:mb-0">2001-2004</span>
+                                <span><strong>Post-doctoral Fellow</strong>, Rotman Research Institute, Baycrest Hospital</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Awards -->
+                    <div class="bg-dark-surface p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold mb-6 text-primary">Awards</h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2025</span>
+                                <span><strong>Outstanding Performance Award</strong>, University of Waterloo (also in 2022, 2019, 2016, 2013, 2009) - for exceptional achievements by faculty demonstrating notable accomplishments in research, scholarship, and teaching excellence</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2018</span>
+                                <span><strong>Fellow</strong> – Canadian Society for Brain, Behaviour, and Cognitive Science (CSBBCS)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2017</span>
+                                <span><strong>Fellow</strong> – Association for Psychological Science (APS)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2017</span>
+                                <span><strong>Mentorship Award</strong> - Women in Cognitive Science Canada - for positively impacting, supporting and guiding the careers of women in cognitive science, to address challenges faced by women in the discipline</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2014</span>
+                                <span><strong>Fellow</strong> – Psychonomic Society</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2013</span>
+                                <span><strong>Research Excellence Award</strong> - Ontario Ministry of Research & Innovation - recognizes demonstrated excellence in fields of study that drive innovation, economic growth, and societal benefits within the province.</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2011</span>
+                                <span><strong>Extraordinary Service Award</strong> - Journal of Gerontology: Psychological Science recognizes long-standing excellence as an Associate Editor</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2008</span>
+                                <span><strong>Top Reviewer Award</strong> – Neuropsychologia</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2007</span>
+                                <span><strong>President's Researcher Award</strong> - Canadian Psychological Association - recognizes exceptional quality of contributions to psychology in Canada</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2007</span>
+                                <span><strong>Visiting Scientist Fellowship</strong> – Rotman Research Institute, Baycrest Hospital</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2003</span>
+                                <span><strong>Travel Award</strong> - Organization for Human Brain Mapping</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">2001</span>
+                                <span><strong>Postdoctoral award</strong>, Natural Sciences & Engineering Research Council of Canada (NSERC)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-20 flex-shrink-0 mb-1 sm:mb-0">1996</span>
+                                <span><strong>Postgraduate Masters and Doctoral level Scholarships</strong> – NSERC</span>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <!-- Distinguished Professional Activities -->
+                    <div class="bg-dark-surface p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold mb-6 text-primary">Distinguished Professional Activities</h4>
+                        <ul class="space-y-4 text-gray-300">
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2025-2027</span>
+                                <span><strong>Chair-elect</strong> of the Psychonomic Society</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2023-2026</span>
+                                <span><strong>Chair</strong> - Waterloo University Tenure, Permanence and Promotion Advisory Committee</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2022-2026</span>
+                                <span><strong>Associate Editor</strong>, Canadian Journal of Experimental Psychology (American Psychological Association APA journal)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2022-2025</span>
+                                <span><strong>Co-Chair of Strategic Planning</strong> - Psychonomic Society</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2022-2024</span>
+                                <span><strong>Governing Board Partner</strong> - Canadian Psychological Association</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2020-2022</span>
+                                <span><strong>President</strong> – Canadian Society for Brain, Behaviour, & Cognitive Sciences</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2018-2025</span>
+                                <span><strong>Advisory Board</strong>, Women in Cognitive Science Canada</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2018-2019</span>
+                                <span><strong>Chair</strong> - Natural Sciences & Engineering Research Council of Canada (NSERC) - Discovery Grants, Behavioural Neurosciences, Ottawa, ON</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2014-2018</span>
+                                <span><strong>Associate Editor</strong> - Memory & Cognition (Psychonomic Society journal)</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2013-2015</span>
+                                <span><strong>Associate Editor</strong> - Journal of Gerontology: Psychological Sciences (Oxford journal)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2013</span>
+                                <span><strong>Chair</strong> - NSERC Scholarships & Fellowships National Committee – Life Sciences</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2013</span>
+                                <span><strong>Elected to Memory Disorders Research Society</strong></span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2011-2019</span>
+                                <span><strong>Editorial Board</strong> for Journal of Experimental Psychology: Learning, Memory, & Cognition (APA journal)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2010-2025</span>
+                                <span><strong>Editorial Board</strong> for Psychology & Aging (APA journal)</span>
+                            </li>
+                             <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2010-2025</span>
+                                <span><strong>Editorial Board</strong> for Journal of Gerontology: Psychological Sciences (Oxford journal)</span>
+                            </li>
+                            <li class="flex flex-col sm:flex-row sm:items-start">
+                                <span class="text-secondary font-bold w-28 flex-shrink-0 mb-1 sm:mb-0">2008-2009</span>
+                                <span><strong>Chair, Scholarships & Fellowships Panel</strong> – Ontario Graduate Scholarship</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Focus Section -->
+        <section id="research" class="py-16 px-6 bg-dark-surface">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 text-secondary">Research Focus</h3>
+                    <p class="max-w-3xl mx-auto">
+                        Dr. Fernandes leads research investigating the cognitive and neural mechanisms 
+                        underlying memory processes, with several key areas of focus.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Research Focus 1: Drawing and Memory -->
+                    <div class="bg-dark p-8 rounded-xl shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 text-primary">Drawing and Memory</h4>
+                        <p class="mb-4 text-gray-300">
+                            Dr. Fernandes has pioneered research on how drawing enhances memory for verbal information. 
+                            Her studies demonstrate that drawing pictures of to-be-remembered information leads to 
+                            superior memory compared to other encoding strategies.
+                        </p>
+                        <p class="mb-4 text-gray-300">
+                            This research has shown that drawing is effective across different populations, 
+                            including older adults and individuals with various cognitive impairments. 
+                            The findings suggest that drawing provides a rich and multifaceted encoding experience
+                            that facilitates later recall.
+                        </p>
+                    </div>
+                    
+                    <!-- Research Focus 2: Emotion and Memory -->
+                    <div class="bg-dark p-8 rounded-xl shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 text-primary">Emotion and Memory</h4>
+                        <p class="mb-4 text-gray-300">
+                            Another significant area of Dr. Fernandes' research explores how emotional 
+                            states and emotional content influence memory processes. Her work examines 
+                            the neural systems that support emotional memory and how these systems interact 
+                            with cognitive control processes.
+                        </p>
+                        <p class="mb-4 text-gray-300">
+                            Using behavioral, neuroimaging, and psychophysiological methods, this research 
+                            has revealed important insights into how emotional arousal enhances memory 
+                            formation and how individual differences affect emotional memory processing.
+                        </p>
+                    </div>
+                    
+                    <!-- Research Focus 3: Attention and Memory -->
+                    <div class="bg-dark p-8 rounded-xl shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 text-primary">Attention and Memory</h4>
+                        <p class="mb-4 text-gray-300">
+                            Dr. Fernandes investigates how attentional processes influence memory encoding and retrieval. 
+                            Her research examines the effects of divided attention on memory performance and the 
+                            neural mechanisms that support successful memory formation under different attentional states.
+                        </p>
+                        <p class="mb-4 text-gray-300">
+                            This work has practical implications for understanding how multitasking affects 
+                            learning and memory in educational and everyday settings, as well as how attentional 
+                            deficits contribute to memory problems in clinical populations.
+                        </p>
+                    </div>
+                    
+                    <!-- Research Focus 4: Aging and Memory -->
+                    <div class="bg-dark p-8 rounded-xl shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 text-primary">Aging and Memory</h4>
+                        <p class="mb-4 text-gray-300">
+                            A significant portion of Dr. Fernandes' research examines how memory processes 
+                            change across the lifespan, with a particular focus on healthy aging and 
+                            neurodegenerative conditions.
+                        </p>
+                        <p class="mb-4 text-gray-300">
+                            Her studies investigate age-related changes in different memory systems, 
+                            compensatory mechanisms that support memory in older adults, and interventions
+                            that can enhance memory function in aging populations. This research contributes 
+                            to our understanding of cognitive aging and informs strategies to maintain 
+                            cognitive health throughout the lifespan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drawing and Memory Research Highlight -->
+        <!-- Media Coverage Section -->
+        <!-- Publications Section -->
+    </main>
+
+    <footer class="bg-dark-surface py-8 px-6 shadow-inner">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="https://i.ibb.co/ymXRvyLW/Gemini-Generated-Image-vtj4z6vtj4z6vtj4-removebg-preview.png" alt="Lab Logo" class="h-10 mb-4">
+                    <p class="text-gray-400">© 2023 Cognitive Neuroscience Lab</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Quick Links</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="index.html" class="hover:text-primary">Home</a></li>
+                            <li><a href="about.html" class="hover:text-primary">About</a></li>
+                            <li><a href="people.html" class="hover:text-primary">People</a></li>
+                            <li><a href="research.html" class="hover:text-primary">Research</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Resources</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="publications.html" class="hover:text-primary">Publications</a></li>
+                            <li><a href="join-us.html" class="hover:text-primary">Join Us</a></li>
+                            <li><a href="#" class="hover:text-primary">Community Outreach</a></li>
+                            <li><a href="#" class="hover:text-primary">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Connect</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-.611 1.794-1.574 2.163-2.723-.951.555-1.325 1.324-1.325 1.324-1.325 1.324 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

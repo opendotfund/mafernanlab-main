@@ -1,0 +1,233 @@
+/* Base Styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 3D Effects and Interactive Elements */
+.interactive-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #BB86FC;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(187, 134, 252, 0.2);
+}
+
+.interactive-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #BB86FC, #9969db);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.interactive-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(187, 134, 252, 0.3);
+}
+
+.interactive-button:hover:before {
+    opacity: 1;
+}
+
+.interactive-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(187, 134, 252, 0.2);
+}
+
+/* Navigation Styles */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    color: #BB86FC;
+    background-color: rgba(187, 134, 252, 0.1);
+}
+
+.nav-link.active {
+    color: #BB86FC;
+    background-color: rgba(187, 134, 252, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #BB86FC;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover:after, .nav-link.active:after {
+    width: 80%;
+}
+
+/* Publication Filter Buttons */
+.publication-filter-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    background-color: #1E1E1E;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #333;
+}
+
+.publication-filter-btn:hover {
+    background-color: rgba(187, 134, 252, 0.15);
+    border-color: #BB86FC;
+    color: #BB86FC;
+}
+
+.publication-filter-btn.active {
+    background-color: rgba(3, 218, 198, 0.15);
+    border-color: #03DAC6;
+    color: #03DAC6;
+}
+
+/* Testimonial Slider */
+.testimonial {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.testimonial:before {
+    content: "\201C"; /* Using CSS content for quote */
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    font-size: 3rem;
+    color: #BB86FC;
+    font-family: Georgia, serif;
+    line-height: 1;
+    opacity: 0.5;
+}
+
+/* FAQ Accordion */
+.faq-question svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active svg {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Timeline Styling */
+.timeline-item:not(:last-child) .timeline-connector {
+    height: calc(100% + 3rem); /* Adjust as needed based on item padding/margin */
+}
+
+/* Group Photo Placeholder Styling */
+.group-photo-placeholder, .team-photo-container {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.group-photo-placeholder:hover, .team-photo-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 3D Cards */
+.research-card, .team-member-card, .project-card, .publication-item, .facility-card, .media-card {
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.research-card:hover, .team-member-card:hover, .project-card:hover, .publication-item:hover, .facility-card:hover, .media-card:hover {
+    transform: translateY(-5px) translateZ(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Spline Viewer Specific Styling */
+.spline-container {
+    position: relative; /* For absolute positioning of potential overlays like loaders */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Height is controlled by Tailwind classes in index.html (e.g., h-[300px] md:h-[500px]) */
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%; /* Make spline-viewer fill its container height */
+    min-height: 300px;  /* Ensure a minimum height for the viewer itself */
+    display: block;     /* Behaves as a block-level element */
+    border: none;       /* Ensure no border */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) { /* Tailwind 'md' breakpoint is 768px */
+    .interactive-button {
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.375rem 0.75rem;
+    }
+
+    /* 
+       The height of spline-viewer is now 100% of its container.
+       The container's height is responsively set in index.html using Tailwind:
+       h-[300px] for screens < 768px
+       md:h-[500px] for screens >= 768px
+       The min-height: 300px on spline-viewer ensures it respects its minimum size.
+    */
+}
+

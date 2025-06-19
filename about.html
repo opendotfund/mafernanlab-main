@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cognitive Neuroscience Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#BB86FC",
+                        secondary: "#03DAC6",
+                        dark: "#121212",
+                        "dark-surface": "#1E1E1E"
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="w-full">
+        <!-- Navigation -->
+        <nav class="px-6 py-4 bg-dark-surface shadow-lg">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://i.ibb.co/ymXRvyLW/Gemini-Generated-Image-vtj4z6vtj4z6vtj4-removebg-preview.png" alt="Lab Logo" class="h-12 mr-4">
+                    <h1 class="text-2xl font-bold text-white">Fernandes Memory Aging & Language Lab</h1>
+                </div>
+                <div class="nav-links flex flex-wrap justify-center gap-1 md:gap-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="research.html" class="nav-link">Research</a>
+                    <a href="teaching.html" class="nav-link">Teaching</a>
+                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="people.html" class="nav-link">People</a>
+                    <a href="join-us.html" class="nav-link">Join Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <!-- About Hero Section -->
+        <section class="py-16 px-6 bg-gradient-to-b from-dark-surface to-dark">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">About Our Lab</h2>
+                    <p class="text-xl max-w-3xl mx-auto">
+                        Advancing cognitive neuroscience through innovative research on memory, attention, 
+                        and neural mechanisms of human cognition.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="py-16 px-6 bg-dark">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-dark-surface p-8 rounded-xl shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-secondary text-center">Our Mission</h3>
+                        <p class="mb-4 text-center">
+                            To advance our understanding of human cognition through rigorous neuroscientific research,
+                            focusing on memory, attention, and cognitive processes. We aim to bridge laboratory findings
+                            with real-world applications to improve human cognitive function.
+                        </p>
+                        <p class="text-center">
+                            Our interdisciplinary approach combines cutting-edge neuroimaging techniques, behavioral
+                            experiments, and computational modeling to uncover the neural mechanisms underlying
+                            cognitive processes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach & Methodology -->
+        <section class="py-16 px-6 bg-dark-surface">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-primary">Research Approach</h2>
+                    <p class="max-w-3xl mx-auto">
+                        Our lab employs a multi-method approach to investigate cognitive processes,
+                        utilizing cutting-edge techniques to understand the neural basis of cognition.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="method-card bg-dark p-6 rounded-lg shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-secondary text-center">Behavioral Experiments</h3>
+                        <p class="text-center">
+                            We design and conduct rigorous behavioral experiments to measure cognitive processes
+                            such as memory, attention, and decision-making in controlled laboratory settings.
+                        </p>
+                    </div>
+                    
+                    <div class="method-card bg-dark p-6 rounded-lg shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-secondary text-center">Neuroimaging Techniques</h3>
+                        <p class="text-center">
+                            We utilize advanced neuroimaging methods including fMRI and EEG to observe
+                            brain activity during cognitive tasks, providing insights into neural mechanisms.
+                        </p>
+                    </div>
+                    
+                    <div class="method-card bg-dark p-6 rounded-lg shadow-lg">
+                        <div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-secondary text-center">Computational Modeling</h3>
+                        <p class="text-center">
+                            We develop and apply computational models to formalize theories and
+                            interpret experimental data, creating a bridge between behavior and neural activity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lab History & Achievements -->
+        <section class="py-16 px-6 bg-dark">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-primary">Lab History & Achievements</h2>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="timeline-container relative">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item mb-12 md:mb-0 md:grid md:grid-cols-12 md:gap-6">
+                            <div class="timeline-date md:col-span-3 mb-4 md:mb-0 md:text-right">
+                                <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">2010</span>
+                            </div>
+                            <div class="timeline-connector hidden md:block md:col-span-1">
+                                <div class="h-full w-px bg-gray-700 mx-auto relative">
+                                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-secondary rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="timeline-content md:col-span-8 bg-dark-surface p-6 rounded-xl shadow-lg">
+                                <h3 class="text-xl font-semibold mb-2 text-secondary">Lab Foundation</h3>
+                                <p>
+                                    The Cognitive Neuroscience Lab was established with a focus on investigating
+                                    the neural mechanisms underlying memory and cognitive processes.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item mb-12 md:mb-0 md:grid md:grid-cols-12 md:gap-6">
+                            <div class="timeline-date md:col-span-3 mb-4 md:mb-0 md:text-right">
+                                <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">2014</span>
+                            </div>
+                            <div class="timeline-connector hidden md:block md:col-span-1">
+                                <div class="h-full w-px bg-gray-700 mx-auto relative">
+                                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-primary rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="timeline-content md:col-span-8 bg-dark-surface p-6 rounded-xl shadow-lg">
+                                <h3 class="text-xl font-semibold mb-2 text-secondary">Major Research Grant</h3>
+                                <p>
+                                    Received a significant grant to expand research on the neural correlates of
+                                    episodic memory, enabling the acquisition of advanced neuroimaging equipment.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item mb-12 md:mb-0 md:grid md:grid-cols-12 md:gap-6">
+                            <div class="timeline-date md:col-span-3 mb-4 md:mb-0 md:text-right">
+                                <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">2017</span>
+                            </div>
+                            <div class="timeline-connector hidden md:block md:col-span-1">
+                                <div class="h-full w-px bg-gray-700 mx-auto relative">
+                                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-secondary rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="timeline-content md:col-span-8 bg-dark-surface p-6 rounded-xl shadow-lg">
+                                <h3 class="text-xl font-semibold mb-2 text-secondary">Breakthrough Publication</h3>
+                                <p>
+                                    Our lab's research on the interaction between emotion and memory was published
+                                    in a high-impact journal, establishing our position in the field.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item md:grid md:grid-cols-12 md:gap-6">
+                            <div class="timeline-date md:col-span-3 mb-4 md:mb-0 md:text-right">
+                                <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Present</span>
+                            </div>
+                            <div class="timeline-connector hidden md:block md:col-span-1">
+                                <div class="h-full w-px bg-gray-700 mx-auto relative">
+                                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-primary rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="timeline-content md:col-span-8 bg-dark-surface p-6 rounded-xl shadow-lg">
+                                <h3 class="text-xl font-semibold mb-2 text-secondary">Expanding Horizons</h3>
+                                <p>
+                                    Currently, we're expanding our research to include computational neuroscience
+                                    approaches and collaborating with international partners on multi-site studies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark-surface py-8 px-6 shadow-inner">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="https://i.ibb.co/ymXRvyLW/Gemini-Generated-Image-vtj4z6vtj4z6vtj4-removebg-preview.png" alt="Lab Logo" class="h-10 mb-4">
+                    <p class="text-gray-400">© 2023 Fernandes Memory Aging & Language Lab</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Quick Links</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="index.html" class="hover:text-primary">Home</a></li>
+                            <li><a href="about.html" class="hover:text-primary">About</a></li>
+                            <li><a href="research.html" class="hover:text-primary">Research</a></li>
+                            <li><a href="teaching.html" class="hover:text-primary">Teaching</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Resources</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="publications.html" class="hover:text-primary">Publications</a></li>
+                            <li><a href="people.html" class="hover:text-primary">People</a></li>
+                            <li><a href="join-us.html" class="hover:text-primary">Join Us</a></li>
+                            <li><a href="#" class="hover:text-primary">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
