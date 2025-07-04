@@ -19,7 +19,7 @@ const renderFaculty = (container) => {
         <div class="team-member-card bg-dark-surface rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 max-w-2xl w-full">
             <div class="md:flex">
                 <div class="md:flex-shrink-0 md:w-64 flex items-center justify-center bg-dark border-b md:border-b-0 md:border-r border-gray-700">
-                    <img src="/Myra-Fernandes-RIA-photo-683x1024 (1).gif" alt="Dr. Myra A. Fernandes" class="object-cover h-64 w-64 rounded-lg shadow-md" />
+                    <img src="public/Myra-Fernandes-RIA-photo-683x1024 (1).gif" alt="Dr. Myra A. Fernandes" class="object-cover h-64 w-64 rounded-lg shadow-md" />
                 </div>
                 <div class="p-8">
                     <h4 class="text-2xl font-bold text-primary mb-2">${faculty.name}</h4>
@@ -43,9 +43,9 @@ const renderGraduateStudents = (container) => {
         
         // Use actual photos for specific students
         if (student.name === "Yadurshana Sivashankar") {
-            photoContent = `<img src="/yadurshana-sivashankar_photo (1).png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
+            photoContent = `<img src="public/yadurshana-sivashankar_photo (1).png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
         } else if (student.name === "Sophia Tran") {
-            photoContent = `<img src="/sophiatran.png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
+            photoContent = `<img src="public/sophiatran.png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
         } else {
             photoContent = `
                 <div class="text-center p-3">
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     labPhotoSection.innerHTML = `
         <div class="container mx-auto text-center mb-8">
             <h2 class="text-3xl font-bold mb-4 text-primary">Lab Group Photo 2024</h2>
-            <img src="/IMG_2987.jpg" alt="Lab Group Photo 2024" class="mx-auto rounded-lg shadow-lg max-w-2xl w-full object-cover mb-4" />
+            <img src="public/IMG_2987.jpg" alt="Lab Group Photo 2024" class="mx-auto rounded-lg shadow-lg max-w-2xl w-full object-cover mb-4" />
         </div>
     `;
     main.prepend(labPhotoSection);
