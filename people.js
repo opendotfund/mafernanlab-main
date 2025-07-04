@@ -203,16 +203,9 @@ const renderGraduateAlumni = (container) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const main = document.querySelector('main') || document.body;
-    // Insert lab group photo section at the top
-    const labPhotoSection = document.createElement('section');
-    labPhotoSection.className = 'py-12 px-6 bg-dark-surface';
-    labPhotoSection.innerHTML = `
-        <div class="container mx-auto text-center mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-primary">Lab Group Photo 2024</h2>
-            <img src="public/IMG_2987.jpg" alt="Lab Group Photo 2024" class="mx-auto rounded-lg shadow-lg max-w-2xl w-full object-cover mb-4" />
-        </div>
-    `;
-    main.prepend(labPhotoSection);
+    // Remove any existing lab group photo section if present
+    const oldLabPhotoSection = document.querySelector('.lab-group-photo-section');
+    if (oldLabPhotoSection) oldLabPhotoSection.remove();
 
     const facultyContainer = document.getElementById('faculty-container');
     const gradStudentsContainer = document.getElementById('graduate-students-container');
