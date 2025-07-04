@@ -19,7 +19,7 @@ const renderFaculty = (container) => {
         <div class="team-member-card bg-dark-surface rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 max-w-2xl w-full">
             <div class="md:flex">
                 <div class="md:flex-shrink-0 md:w-64 flex items-center justify-center bg-dark border-b md:border-b-0 md:border-r border-gray-700">
-                    ${createPlaceholderSVG()}
+                    <img src="public/Myra-Fernandes-RIA-photo-683x1024 (1).gif" alt="Dr. Myra A. Fernandes" class="object-cover h-64 w-64 rounded-lg shadow-md" />
                 </div>
                 <div class="p-8">
                     <h4 class="text-2xl font-bold text-primary mb-2">${faculty.name}</h4>
@@ -134,8 +134,73 @@ const renderSimpleList = (container, data, iconColorClass) => {
     container.innerHTML = content;
 };
 
+const renderUndergraduateAlumni = (container) => {
+    if (!teamData.undergraduateAlumni || teamData.undergraduateAlumni.length === 0) return;
+    
+    let content = `<div class="bg-dark-surface p-8 rounded-lg shadow-lg">`;
+    content += `<div class="overflow-x-auto">`;
+    content += `<table class="w-full text-left">`;
+    content += `<thead><tr class="border-b border-gray-600">`;
+    content += `<th class="py-3 px-4 text-primary font-semibold">Year</th>`;
+    content += `<th class="py-3 px-4 text-primary font-semibold">Student Name</th>`;
+    content += `<th class="py-3 px-4 text-primary font-semibold">Topic</th>`;
+    content += `</tr></thead><tbody>`;
+    
+    teamData.undergraduateAlumni.forEach(alumni => {
+        content += `<tr class="border-b border-gray-700 hover:bg-dark">`;
+        content += `<td class="py-3 px-4 text-secondary font-medium">${alumni.year}</td>`;
+        content += `<td class="py-3 px-4 text-gray-100 font-medium">${alumni.name}</td>`;
+        content += `<td class="py-3 px-4 text-gray-300">${alumni.topic}</td>`;
+        content += `</tr>`;
+    });
+    
+    content += `</tbody></table></div></div>`;
+    container.innerHTML = content;
+};
+
+const renderGraduateAlumni = (container) => {
+    if (!teamData.graduateAlumni || teamData.graduateAlumni.length === 0) return;
+    
+    let content = '';
+    teamData.graduateAlumni.forEach(alumni => {
+        content += `
+            <div class="team-member-card bg-dark rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
+                <div class="team-photo-container h-48 bg-dark-surface flex items-center justify-center border-b border-gray-700">
+                    <div class="text-center p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto text-gray-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="text-gray-400 text-xs">Alumni Photo</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <h4 class="text-lg font-bold text-primary mb-1">${alumni.name}</h4>
+                    <p class="text-sm text-secondary font-medium mb-3">${alumni.program}</p>
+                    <div class="text-sm text-gray-300 space-y-2 mb-4 flex-grow">
+                        <p><span class="font-semibold">Research:</span> ${alumni.research}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    content = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">${content}</div>`;
+    container.innerHTML = content;
+};
 
 document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main') || document.body;
+    // Insert lab group photo section at the top
+    const labPhotoSection = document.createElement('section');
+    labPhotoSection.className = 'py-12 px-6 bg-dark-surface';
+    labPhotoSection.innerHTML = `
+        <div class="container mx-auto text-center mb-8">
+            <h2 class="text-3xl font-bold mb-4 text-primary">Lab Group Photo 2024</h2>
+            <img src="public/IMG_2987.jpg" alt="Lab Group Photo 2024" class="mx-auto rounded-lg shadow-lg max-w-2xl w-full object-cover mb-4" />
+        </div>
+    `;
+    main.prepend(labPhotoSection);
+
     const facultyContainer = document.getElementById('faculty-container');
     const gradStudentsContainer = document.getElementById('graduate-students-container');
     const undergradContainer = document.getElementById('undergraduate-researchers-container');
@@ -143,11 +208,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const gradAwardsContainer = document.getElementById('graduate-awards-container');
     const undergradAwardsContainer = document.getElementById('undergraduate-awards-container');
     const placementsContainer = document.getElementById('placements-container');
+    const undergraduateAlumniContainer = document.getElementById('undergraduate-alumni-container');
+    const graduateAlumniContainer = document.getElementById('graduate-alumni-container');
 
     if (facultyContainer) renderFaculty(facultyContainer);
     if (gradStudentsContainer) renderGraduateStudents(gradStudentsContainer);
     if (undergradContainer) renderUndergraduateResearchers(undergradContainer);
     if (raContainer) renderResearchAssistants(raContainer);
+    if (undergraduateAlumniContainer) renderUndergraduateAlumni(undergraduateAlumniContainer);
+    if (graduateAlumniContainer) renderGraduateAlumni(graduateAlumniContainer);
 
     if (gradAwardsContainer) renderSimpleList(gradAwardsContainer, teamData.graduateStudentAwards, 'bg-primary');
     if (undergradAwardsContainer) renderSimpleList(undergradAwardsContainer, teamData.undergraduateStudentAwards, 'bg-secondary');

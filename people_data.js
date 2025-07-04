@@ -21,25 +21,54 @@ const teamData = {
             students: [
                 { name: "Amelia Mawdsley", program: "Cognitive Neuroscience", education: "BSc candidate (Waterloo)", interests: "How does cardiovascular health impact cognitive test performance? The role of aging." },
             ]
-        },
-        {
-            category: "Recent Directed Study and Co-op Students",
-            students: [
-                { name: "Barbara", interests: "Using memory to cue autobiographical memories in dementia." },
-                { name: "Saranka", interests: "Boosting memory for words in children." },
-                { name: "Phil", interests: "Enhancing spatial navigation memory: designing virtual reality environments in Unity." },
-                { name: "Saad", interests: "Benefit of drawing versus writing on memory for scenes." },
-                { name: "Lauren and Sara", interests: "Are emojis processed Visuo-spatially or Verbally? Evidence for dual codes." },
-            ]
         }
     ],
-    researchAssistants: [
-        { name: "Evan", interests: "Memory for routes: Driving in virtual reality." },
-        { name: "Jahnvi", interests: "Comparing navigation techniques in virtual reality: Role of aging." },
-        { name: "Adissa", interests: "Learning online versus in-person." },
-        { name: "Alina", interests: "Encoding techniques to aid comprehension." },
-        { name: "Eric", interests: "Using music to cue memories." },
-        { name: "Kristen", interests: "Music cueing enhances autobiographical memory." },
+    undergraduateAlumni: [
+        { year: "2023", name: "Amelia Mewdsley", topic: "How does cardiovascular health impact test performance? The role of aging" },
+        { year: "2022", name: "Aimee Xinxo", topic: "Effectiveness of encoding techniques for academic materials under high anxiety conditions" },
+        { year: "2022", name: "Brian Kim", topic: "Best strategies to learn a second language" },
+        { year: "2021", name: "Ciel Liu", topic: "The Effect of Observed Enactment and Gesture on Memory" },
+        { year: "2020", name: "Isaac Beech", topic: "Comparing methods of intentional reminiscing" },
+        { year: "2019", name: "Sihan Zhang", topic: "Words or Symbolic Images: How Do Young Adults Process Emojis?" },
+        { year: "2018", name: "Victoria Garner", topic: "Paired-Associate memory in Older and Younger adults" },
+        { year: "2017", name: "Lorielle Dietze", topic: "Memory in Bilingual Individuals: A Continuation of the Shared and Separate Debate" },
+        { year: "2016", name: "Brady Roberts", topic: "Drawing with your eyes: Extending Mnemonics" },
+        { year: "2016", name: "Harpreet Grewal", topic: "Memory for Maps: Seeing vs. Doing" },
+        { year: "2016", name: "Alex Moniz", topic: "A Survey of Older Adults' Perspectives on Research in Aging" },
+        { year: "2016", name: "Graham Schwoob", topic: "Does Content Matter? An Investigation of Drawing Relevancy and its Effect on Recall" },
+        { year: "2016", name: "Grace Lim", topic: "Role of encoding context in protecting memories from negative effects of divided attention" },
+        { year: "2014", name: "Tyler Good", topic: "Remote mild traumatic brain injury and normal age-related changes in memory" },
+        { year: "2014", name: "Robin Leung", topic: "Can Age-Related Differences in Face-Name Memory be alleviated?" },
+        { year: "2012", name: "Bri Groot", topic: "Investigating an attentional locus for deficits in destination memory in older adults." },
+        { year: "2011", name: "Niron Khan", topic: "Context-Specific brain networks reactivated during retrieval." },
+        { year: "2011", name: "Bethany Delleman", topic: "Effect of anxiety on Memory and Confidence." },
+        { year: "2011", name: "Leah Henderson, Alison Maksymchak & Yayah Remtulla", topic: "Developing a language learning software." },
+        { year: "2010", name: "Jessica Wuergler", topic: "Memory for Face-Name Associations." },
+        { year: "2009", name: "Ethan Miller", topic: "Techniques to aid memory in the real world." },
+        { year: "2008", name: "Annalisa Minniti", topic: "Context Effects on Perception & Memory using virtual reality." },
+        { year: "2007", name: "Shahnaz Koji", topic: "The effect of Emotion on Perception and Memory for Faces Interfering with visuo-spatial representations during retrieval." },
+        { year: "2007", name: "Emma Guild", topic: "Interfering with visuo-spatial representations during retrieval." },
+        { year: "2006", name: "Stephanie Waechter", topic: "Effects of Non- Linguistic Competition in Dichotic Listening." },
+        { year: "2006", name: "Rachel Hepburn", topic: "Autobiographical memories in younger and older adults." },
+        { year: "2005", name: "Karen Carter", topic: "Verbal and Nonverbal Competing Stimuli in Dichotic Listening." },
+        { year: "2005", name: "Allison Andres", topic: "Effect of Presentation Duration in a Global- Local Task." }
+    ],
+    graduateAlumni: [
+        { name: "Dr. Brady Roberts", program: "PhD in Cognitive Neuroscience", research: "On Memory for Everyday Symbols" },
+        { name: "Adam Cox", program: "Masters in Cognitive Neuroscience", research: "Long-Term Consequences of Mild Traumatic Brain Injury in Younger Adults on Cognitive Performance and Emotional Regulation: Comparisons with Older Adults" },
+        { name: "Dr. Ryan Yeung", program: "PhD in Cognitive Neuroscience", research: "The Persistence of Involuntary Memory: Analyzing Phenomenology, Links to Mental Health, and Content" },
+        { name: "Dr. Christopher M. Lee", program: "PhD in Cognitive Neuroscience", research: "Context reinstatement reconsidered: Investigating boundary conditions of the effect" },
+        { name: "Dr. Melissa Meade", program: "PhD in Cognitive Neuroscience", research: "The benefits and boundary conditions of drawing on episodic memory" },
+        { name: "Dr. Jeffrey Wammes", program: "PhD in Cognitive Neuroscience", research: "On the mnemonic benefits of drawing" },
+        { name: "Bethany Delleman", program: "Masters in Cognitive Neuroscience", research: "Influence of anxiety on memory and confidence" },
+        { name: "Dr. Fahad Ahmad", program: "Research associate, PhD in Cognitive Neuroscience at Wilfred Laurier University", research: "Associative memory in younger and older adults" },
+        { name: "Dr. Shahnaz Koji", program: "PhD in Cognitive Neuroscience", research: "Remembering faces in different places: influence of context on face memory" },
+        { name: "Dr. Jennifer Tomaszczyk", program: "PhD in Cognitive Neuroscience", research: "Mechanisms of the aging-related positivity effect in memory and attention" },
+        { name: "Dr. Lana Ozen", program: "PhD in Cognitive Neuroscience", research: "Investigation of long-term changes after mild head injury using novel and sensitive measures" },
+        { name: "Dr. Erin Skinner", program: "PhD in Cognitive Neuroscience", research: "The influence of study context on recollection: Cognitive, neural, and age-related processes" },
+        { name: "Dr. Stacey L. Danckert", program: "PhD in Cognitive Neuroscience", research: "The interaction between retrieval and encoding processes in memory" },
+        { name: "Harm Kelly", program: "Masters in Cognitive Neuroscience", research: "Relationship between cardiovascular health and the brain in the aging population" },
+        { name: "Tracee J. Francis", program: "Masters of Science", research: "Memory in bilinguals" }
     ],
     graduateStudentAwards: [
         "2025 Khalil Husein NSERC–PGS-Doctoral",
@@ -115,7 +144,7 @@ const teamData = {
         "2006 Allison Andres NSERC undergraduate award",
         "2006 Melanie Matthews NSERC PGS-Masters award",
         "2005 Shahnaz Koji NSERC undergraduate award; Millenium Scholarship",
-        "2005 Karen Carter UW’s President’s Award for Volunteerism"
+        "2005 Karen Carter UW's President's Award for Volunteerism"
     ],
     pastGraduatePlacements: [
         "Adam Cox (completed Masters 2023) – Research Associate (2024-present), Royal Ottawa Mental Health Hospital, Ottawa, ON.",
@@ -124,10 +153,10 @@ const teamData = {
         "Dr. Ryan Yeung (defended PhD August 2022) – NSERC Postdoctoral Fellow (2022-present), Baycrest Hospital: Rotman Research Institute, Toronto, ON.",
         "Dr. Christopher Lee (defended PhD September 2020) – Research and Graduate program coordinator (2020-present), Department of Linguistics, University of Toronto, Toronto, ON.",
         "Dr. Melissa Meade (defended PhD September 2019) – Assistant Professor (2022-present), Department of Psychology, Huron at Western University, London, ON; NSERC postdoctoral fellow (2019-2021), University of Toronto, Toronto, ON.",
-        "Dr. Jeffrey Wammes (defended PhD July 2017) – Assistant Professor (2020-present), Dept. of Psychology, Queen’s University, Kingston, ON; NSERC postdoctoral fellow (2017-2020), Yale University, New Haven, Connecticut, USA.",
+        "Dr. Jeffrey Wammes (defended PhD July 2017) – Assistant Professor (2020-present), Dept. of Psychology, Queen's University, Kingston, ON; NSERC postdoctoral fellow (2017-2020), Yale University, New Haven, Connecticut, USA.",
         "Bethany Delleman (completed Masters 2014) – Research Coordinator (2015-present), McMaster University, Hamilton, ON; Course Instructor (2014-2016) at Redeemer College University, Ancaster, ON.",
         "Dr. Shahnaz Koji (now Winer; defended PhD 2013) – Managing Director Vibrant Minds (2020- present) & CPA Psychology Careers and Professionals section Head; Dean Social Sciences and Faculty (2015-2020), Department of Psychology, Columbia College, Vancouver, BC.",
-        "Dr. Lana Ozen (defended PhD 2012) – Research Associate (2019-present), University of Victoria, Institute on Aging & Lifelong Health, and Recreation Manager (2021), Revera Inc., Victoria, BC; Network Centre of Excellence Canada Researcher (2013), and Alzheimer Society of Canada Postdoctoral Fellow; St. Joseph’s Health Care, Lakehead University, Thunder Bay, ON.",
+        "Dr. Lana Ozen (defended PhD 2012) – Research Associate (2019-present), University of Victoria, Institute on Aging & Lifelong Health, and Recreation Manager (2021), Revera Inc., Victoria, BC; Network Centre of Excellence Canada Researcher (2013), and Alzheimer Society of Canada Postdoctoral Fellow; St. Joseph's Health Care, Lakehead University, Thunder Bay, ON.",
         "Dr. Jennifer Tomaszczyk (defended PhD 2012) - Science Associate (2015-present), Krembil Research Institute, University Health Network, Toronto, ON.",
         "Dr. Stacey Danckert (defended PhD 2011) - Co-Director Waterloo Region Environmental Network (2015-present); Green Party Representative Kitchener-Waterloo (2013); Postdoctoral Fellow - Baycrest Hospital: Rotman Research Institute (2012-2013), Toronto, ON.",
         "Harm Kelly (completed Masters 2011) – attained certification to work with developmentally delayed individuals.",
