@@ -196,63 +196,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-
-        // 3D Brain Interaction (check if Spline viewer exists)
-        const splineViewerElement = document.querySelector('spline-viewer');
-        if (splineViewerElement) {
-            const splineContainer = document.querySelector('.spline-container');
-
-            if (splineContainer) {
-                // Add a custom loading indicator
-                const loadingIndicator = document.createElement('div');
-                loadingIndicator.className = 'absolute inset-0 flex items-center justify-center bg-dark bg-opacity-80 z-10 pointer-events-none';
-                loadingIndicator.innerHTML = `
-                    <div class="text-center">
-                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary mb-4"></div>
-                        <p class="text-primary">Loading 3D Brain Model...</p>
-                    </div>
-                `;
-                splineContainer.appendChild(loadingIndicator);
-                
-                // Remove loading indicator when Spline model is loaded
-                splineViewerElement.addEventListener('load', function() {
-                    if (loadingIndicator && loadingIndicator.parentElement === splineContainer) {
-                        splineContainer.removeChild(loadingIndicator);
-                    }
-                });
-
-                // Add an error handler for the spline viewer
-                splineViewerElement.addEventListener('error', function(event) {
-                    console.error('Spline Viewer Error:', event);
-                    if (loadingIndicator && loadingIndicator.parentElement === splineContainer) {
-                        loadingIndicator.innerHTML = `
-                            <div class="text-center p-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-red-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                </svg>
-                                <p class="text-red-400 font-semibold">Failed to load 3D Brain Model.</p>
-                                <p class="text-sm text-gray-400 mt-1">Please try refreshing the page. If the issue persists, check the console for errors or contact support.</p>
-                            </div>
-                        `;
-                    } else if(splineContainer) {
-                        const errorFallback = document.createElement('div');
-                        errorFallback.className = 'absolute inset-0 flex items-center justify-center bg-dark bg-opacity-80 z-10 pointer-events-none';
-                        errorFallback.innerHTML = `
-                            <div class="text-center p-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-red-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                </svg>
-                                <p class="text-red-400 font-semibold">An error occurred with the 3D Brain Model.</p>
-                                <p class="text-sm text-gray-400 mt-1">Please check the console for details.</p>
-                            </div>
-                        `;
-                        splineContainer.appendChild(errorFallback);
-                    }
-                });
-            } else {
-                console.warn('Spline container (.spline-container) not found. Cannot add loading indicator or error handling for Spline viewer.');
-            }
-        }
         
     } catch (error) {
         console.error('Error in main.js:', error);
