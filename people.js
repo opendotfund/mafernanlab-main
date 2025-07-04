@@ -39,15 +39,28 @@ const renderFaculty = (container) => {
 const renderGraduateStudents = (container) => {
     let content = '';
     teamData.graduateStudents.forEach(student => {
+        let photoContent = '';
+        
+        // Use actual photos for specific students
+        if (student.name === "Yadurshana Sivashankar") {
+            photoContent = `<img src="public/yadurshana-sivashankar_photo (1).png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
+        } else if (student.name === "Sophia Tran") {
+            photoContent = `<img src="public/sophiatran.png" alt="${student.name}" class="object-cover h-48 w-full rounded-t-lg" />`;
+        } else {
+            photoContent = `
+                <div class="text-center p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto text-gray-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p class="text-gray-400 text-xs">Student Photo</p>
+                </div>
+            `;
+        }
+        
         content += `
             <div class="team-member-card bg-dark rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
                 <div class="team-photo-container h-48 bg-dark-surface flex items-center justify-center border-b border-gray-700">
-                     <div class="text-center p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto text-gray-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-gray-400 text-xs">Student Photo</p>
-                    </div>
+                    ${photoContent}
                 </div>
                 <div class="p-5 flex-grow flex flex-col">
                     <h4 class="text-lg font-bold text-primary mb-1">${student.name}</h4>
